@@ -10,6 +10,8 @@
 <body>
   <a href="/">Home</a>
   <a href="/about">About</a>
+  <a href="/blog">Blog</a>
+  <a href="/contact">About</a>
   <h1>Halaman About</h1>
   <h3>Owner: {{ $nama }}</h3>
   <img src="img/hand2.jpg" width="300" alt="">
