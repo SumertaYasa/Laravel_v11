@@ -74,8 +74,8 @@
         <div x-show="isOpen" class="md:hidden" id="mobile-menu">
           <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="block px-3 py-2 text-base font-medium text-white bg-gray-900 rounded-md" aria-current="page">Home</a>
-            <a href="#" class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white">About</a>
+            <a href="#" class="{{ request()->is('/') ? 'text-white bg-gray-900' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}} block px-3 py-2 text-base font-medium  rounded-md" aria-current="page">Home</a>
+            <a href="#" class="{{ request()->is('/about') ? 'text-white bg-gray-900' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}} block px-3 py-2 text-base font-medium ">About</a>
             <a href="#" class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white">Blog</a>
             <a href="#" class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white">Contact</a>
           </div>
