@@ -25,9 +25,16 @@ class UserFactory extends Factory
     {
         return [
             'name' => fake()->name(),
+            'username' => fake()->unique()->username(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
+             // $a = $a ? $a : $b ternary operator, bentuk sederhana dari if else.
+            // $a = $a ?: $b elvis operator, bentuk sederhana dari ternary.
+            /* $a ??= $b null coalescing operator, fungsi mengembalikan nilai sebelah kiri jika 
+                        tidak null atau undefined, dan jika terdapat 
+                        null atau undefined maka nilai sebelah kanan yang akan diambil.
+            */
             'remember_token' => Str::random(10),
         ];
     }
